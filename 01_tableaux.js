@@ -14,3 +14,5 @@ const devs = equipe.filter(membre => membre.role === 'dev') ;
 const nomsDevs = devs.map(membre => membre.nom) ;
 
 console.log('Liste des devs :', nomsDevs) ;
+
+//test
