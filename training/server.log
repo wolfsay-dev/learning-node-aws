@@ -1,0 +1,7 @@
+[INFO] Démarrage du service web sur le port 8080
+[INFO] Connexion à la base de données réussie
+[WARNING] Utilisation mémoire élevée (82%)
+[ERROR] Échec de la connexion au service tiers
+[INFO] Redémarrage automatique du module de cache
+[ERROR] Timeout de la requête HTTP après 30 secondes
+[ERROR] Un fichier à été supprimé sans autorisation. La restauration a été activtée
