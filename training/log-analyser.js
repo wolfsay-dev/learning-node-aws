@@ -3,7 +3,15 @@ const path = require('path');
 
 async function readLogs() {
     try {
-        const way = path.join(__dirname, 'server.log');
+
+        const fileName = process.argv[2];
+
+        if (!fileName) {
+            console.log(`Veuillez retenter en renseignant un fichier à analyser`);
+            return
+        }           
+
+        const way = path.join(__dirname, fileName);
         const logs_brut = await fs.readFile(way, 'utf-8');
         const lignes = logs_brut.split('\n');
       
@@ -11,11 +19,8 @@ async function readLogs() {
 
         await fs.writeFile('error-report.txt', warnings)
         console.log(`FICHIER MIS A JOUR AVEC SUCCES`);
-        
-        
 
-
-   } catch (e) {
+    } catch (e) {
     console.log(e);
     
    }
